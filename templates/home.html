@@ -3,11 +3,21 @@
 <body>
 <h1>Welcome to My Hypothetical Bookstore</h1>
 
-<p>It is now {{ current_date }}. This is an internet site on which you could, hypothetically, buy:</p>
+<p>
+  It is now {{ current_date }}. This is an internet site on which you could, hypothetically, buy:
+</p>
 <ul>
   <li>Books</li>
   <li>Books</li>
   <li>Books!</li>
 </ul>
+<p>
+  Here are some of the books in our vast library (just don't confuse it with a <em>lending</em> library&mdash;what are you, some kind of Socialist??)&mdash;
+<ul>
+  {% for book in books %}
+  <li><em>{{ book.title }}</em></li>  
+  {% endfor %}
+</ul>
+</p>
 <body>
 </html>
