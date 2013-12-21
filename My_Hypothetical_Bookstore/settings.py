@@ -1,33 +1,21 @@
 """
-Django settings for My_Hypothetical_Bookstore project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
+Django settings for My Hypothetical Bookstore
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-TEMPLATE_DIRS = BASE_DIR + '/templates/'
+TEMPLATE_DIRS = os.path.join(BASE_DIR, 'templates')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
+# secret key in publically available source not suitable for
+# production
 SECRET_KEY = 'krj(k)ve!fa2=jwqkkvd#rw8gnsa%6x8*df6nem%firxd40n**'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# debug mode not suitable for production
 DEBUG = True
 
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
-# Application definition
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -37,6 +25,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
+    'bootstrap3',
     'bookstore_proper',
 )
 
@@ -53,9 +42,7 @@ ROOT_URLCONF = 'My_Hypothetical_Bookstore.urls'
 
 WSGI_APPLICATION = 'My_Hypothetical_Bookstore.wsgi.application'
 
-
 # Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -65,7 +52,6 @@ DATABASES = {
 }
 
 # Internationalization
-# https://docs.djangoproject.com/en/1.6/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -77,8 +63,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
+# Static files
 
 STATIC_URL = '/static/'
