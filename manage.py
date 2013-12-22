@@ -3,7 +3,7 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "My_Hypothetical_Bookstore.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bookstore_proper.settings")
 
     from django.core.management import execute_from_command_line
 

@@ -4,7 +4,7 @@ Django settings for My Hypothetical Bookstore
 
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-TEMPLATE_DIRS = os.path.join(BASE_DIR, 'templates')
+TEMPLATE_DIRS = os.path.join(BASE_DIR, 'bookstore_proper', 'templates')
 
 # secret key in publically available source not suitable for
 # production
@@ -38,9 +38,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'My_Hypothetical_Bookstore.urls'
+ROOT_URLCONF = 'bookstore_proper.urls'
 
-WSGI_APPLICATION = 'My_Hypothetical_Bookstore.wsgi.application'
+WSGI_APPLICATION = 'bookstore_proper.wsgi.application'
 
 # Database
 
