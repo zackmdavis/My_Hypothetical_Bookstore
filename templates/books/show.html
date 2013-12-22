@@ -1,16 +1,11 @@
-{% load bootstrap3 %}
-<html>
-<head>
-  {% bootstrap_css %}
-  <title>
-    My Hypothetical Bookstore | {{ book.title }}
-  </title>
-</head>
-<body>
+{% extends "application.html" %}
+
+{% block title %} {{ book.title }} {% endblock %}
+
+{% block content %}
 <ul>
 {% for key, value in attributes %}
 <li><strong>{{ key }}:</strong> {{ value }}</li>
 {% endfor %}
 </ul>
-<body>
-</html>
+{% endblock %}

@@ -1,14 +1,9 @@
-{% load bootstrap3 %}
-<html>
-<head>
-  {% bootstrap_css %}
-  <title>
-    My Hypothetical Bookstore
-  </title>
-</head>
-<body>
-<h1>Welcome to My Hypothetical Bookstore</h1>
+{% extends "application.html" %}
 
+{% block title %} Welcome {% endblock %}
+
+{% block content %}
+<h1>Welcome to My Hypothetical Bookstore</h1>
 <p>
   It is now {{ current_date }}. This is an internet site on which you could, hypothetically, buy:
 </p>
@@ -20,5 +15,4 @@
 <p>
   Check out our <a href="{% url 'books_index' %}">exhaustive catalogue!</a>
 </p>
-<body>
-</html>
+{% endblock %}

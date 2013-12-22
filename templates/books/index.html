@@ -1,19 +1,11 @@
-{% load bootstrap3 %}
-<html>
-<head>
-  {% bootstrap_css %}
-  <title>
-    My Hypothetical Bookstore | Books Index
-  </title>
-</head>
-<body>
+{% extends "application.html" %}
 
+{% block title %} Catalogue {% endblock %}
+
+{% block content %}
 <ul>
   {% for book in books %}
   <li><em><a href="{% url 'book_show' book.id %}">{{ book.title }}</a></em></li>  
   {% endfor %}
 </ul>
-
-
-<body>
-</html>
+{% endblock %}
