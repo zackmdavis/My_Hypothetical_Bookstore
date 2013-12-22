@@ -1,0 +1,16 @@
+{% extends "application.html" %}
+{% load bootstrap3 %}
+
+{% block title %} author {{ author.name }} {% endblock %}
+
+{% block content %}
+<h2>{% bootstrap_icon "user" %} {{ author.name }}</h2>
+<p>
+  <ul>
+    Books by this author:
+    {% for book in books %}
+    <li><em><a href="{% url 'book_show' book.id %}">{{ book.title }}</a></em></li>
+    {% endfor %}
+  </ul>
+</p>
+{% endblock %}

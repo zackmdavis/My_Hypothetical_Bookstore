@@ -8,6 +8,7 @@ def index(request):
 
 def show(request, book_id):
     book = Book.objects.get(pk=book_id)
-    authors = list(book.authors.all())
+    authors = book.authors.all()
+    publisher = book.publisher
     publication_attributes = {"Publication Date": book.publication_date, "ISBN": book.isbn}.items()
     return render_to_response('books/show.html', locals())
