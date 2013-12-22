@@ -1,0 +1,12 @@
+.my_bookstore_brand {
+    font-family: 'Niconne', cursive;
+    font-size: 300%;
+}
+
+.my_navbar_link {
+    font-weight: bold;
+}
+
+body {
+    background-color: #E9E9E9;
+}

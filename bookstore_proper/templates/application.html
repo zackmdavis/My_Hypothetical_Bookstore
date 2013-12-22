@@ -1,12 +1,23 @@
+{% load staticfiles %}
 {% load bootstrap3 %}
 <html>
 <head>
   {% bootstrap_css %}
+<link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
+<link href="{% static 'stylesheets/application.css' %}" rel="stylesheet" type="text/css">
   <title>
     My Hypothetical Bookstore | {% block title %}{% endblock %}
   </title>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <ul class="nav navbar-nav">
+    <li class="my_bookstore_brand">My Hypothetical Bookstore</li>
+    <li><a class="my_navbar_link" href="/">Home</a></li>
+    <li><a class="my_navbar_link" href="{% url 'books_index' %}">Books</a></li>
+  </ul>
+</nav>
+{% bootstrap_messages %}
 {% block content %}{% endblock %}
 <body>
 </html>
