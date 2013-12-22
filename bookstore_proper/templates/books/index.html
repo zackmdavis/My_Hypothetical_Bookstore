@@ -3,6 +3,10 @@
 {% block title %} Catalogue {% endblock %}
 
 {% block content %}
+<h2>Catalogue</h2>
+<p>
+  These are the books we have for sale:
+</p>
 <ul>
   {% for book in books %}
   <li><em><a href="{% url 'book_show' book.id %}">{{ book.title }}</a></em></li>  

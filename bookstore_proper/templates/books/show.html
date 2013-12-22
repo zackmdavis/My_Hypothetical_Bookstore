@@ -1,11 +1,26 @@
 {% extends "application.html" %}
+{% load bootstrap3 %}
 
 {% block title %} {{ book.title }} {% endblock %}
 
 {% block content %}
+<h2><em>{{ book.title }}</em></h2>
+<p>
+  by {% for author in authors %}
+  <a href="#">{{ author.name }}</a> 
+  {% endfor %}
+</p>
+<p>
+  <strong>${{ book.price }}</strong>
+</p>
+
+<button class="btn btn-primary">
+  {% bootstrap_icon "tag" %} Buy
+</button>
+
 <ul>
-{% for key, value in attributes %}
-<li><strong>{{ key }}:</strong> {{ value }}</li>
-{% endfor %}
+  {% for attribute, value in publication_attributes %}
+  <li><strong>{{ attribute }}:</strong> {{ value }}</li>
+  {% endfor %}
 </ul>
 {% endblock %}
