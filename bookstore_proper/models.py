@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Book(models.Model):
     title = models.CharField(max_length=60)
@@ -15,4 +16,6 @@ class Publisher(models.Model):
     name = models.CharField(max_length=60)
     website = models.URLField()
 
-
+class Customer(models.Model):
+    user = models.OneToOneField(User)
+    balance = models.IntegerField()
