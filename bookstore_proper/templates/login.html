@@ -1,0 +1,12 @@
+{% extends "application.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<form action="/login/" method="post">
+{% csrf_token %}
+<p><input type="text" name="username" placeholder="username"></p>
+<p><input type="password" name="password" placeholder="password"></p>
+<p><input type="submit" value="Login!"></p>
+</form>
+{% endblock %}

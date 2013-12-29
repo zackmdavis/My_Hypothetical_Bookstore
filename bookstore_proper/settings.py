@@ -63,6 +63,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Auth
+
+LOGIN_URL = '/login/'
+LOGOUT_URL = '/logout/'
+
 # Static files
 
 STATIC_URL = '/bookstore_proper/static/'
